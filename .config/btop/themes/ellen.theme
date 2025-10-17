@@ -1,0 +1,58 @@
+# Cyberpunk Rooftop theme for btop
+# Based on your wallpaper color palette
+
+# Main background and foreground
+theme[main_bg]="#1a1825"
+theme[main_fg]="#e8d5e0"
+
+# Title and borders
+theme[title]="#ff7da6"
+theme[hi_fg]="#ff9b8a"
+
+# Selected item
+theme[selected_bg]="#2d2738"
+theme[selected_fg]="#ff7da6"
+
+# Inactive/unfocused
+theme[inactive_fg]="#8b7b9e"
+
+# Process box colors
+theme[proc_misc]="#ff9b8a"
+theme[cpu_box]="#ff7da6"
+theme[mem_box]="#ff9b8a"
+theme[net_box]="#8b7b9e"
+theme[proc_box]="#7fa89e"
+theme[div_line]="#4a3f54"
+
+# Graph colors for CPU
+theme[graph_text]="#e8d5e0"
+theme[meter_bg]="#2d2738"
+theme[used_start]="#ff7da6"
+theme[used_mid]="#ff9b8a"
+theme[used_end]="#ff5577"
+theme[available_start]="#4a3f54"
+theme[available_mid]="#2d2738"
+theme[available_end]="#1a1825"
+
+# Download and Upload graphs
+theme[download_start]="#7fa89e"
+theme[download_mid]="#9eb5c4"
+theme[download_end]="#bdd4e0"
+theme[upload_start]="#ff7da6"
+theme[upload_mid]="#ff9b8a"
+theme[upload_end]="#ffb89d"
+
+# Process colors
+theme[process_start]="#ff7da6"
+theme[process_mid]="#a99dbd"
+theme[process_end]="#8b7b9e"
+
+# Temperature colors
+theme[temp_start]="#7fa89e"
+theme[temp_mid]="#ff9b8a"
+theme[temp_end]="#ff5577"
+
+# Misc colors
+theme[gradient_start]="#ff7da6"
+theme[gradient_mid]="#8b7b9e"
+theme[gradient_end]="#7fa89e"
