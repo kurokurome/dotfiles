@@ -8,6 +8,9 @@ bindkey -v
 # The following lines were added by compinstall
 zstyle :compinstall filename '/home/mash/.zshrc'
 
+export EDITOR=nvim
+export VISUAL=nvim
+
 autoload -Uz compinit
 compinit
 
