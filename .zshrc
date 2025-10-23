@@ -29,7 +29,7 @@ alias ls='ls --color=auto'
 alias ll='ls -lah --color=auto'
 alias grep='grep --color=auto'
 alias rg='rg --color=auto'
-alias settdp='sudo insmod ~/ryzen_smu/ryzen_smu.ko && sudo /usr/local/bin/ryzenadj-12w.sh'
+alias settdp='sudo /usr/local/bin/ryzenadj-12w.sh'
 alias setfan='sudo nbfc start && nbfc set -s 100'
 
 # Catppuccin Mocha themed zsh prompt

@@ -153,7 +153,7 @@ exec --no-startup-id xmodmap -e "keycode 117 = Down"
 
 default_border pixel 3
 
-bindsym $mod+b exec firefox
+bindsym $mod+b exec librewolf
 bindsym $mod+e exec kitty -e yazi
 bindsym $mod+Control+Left workspace prev
 bindsym $mod+Control+Right workspace next
@@ -164,7 +164,7 @@ bindsym $mod+o exec polybar-msg cmd show
 bindsym $mod+c exec kitty -e nvim
 bindsym $mod+Control+l exec betterlockscreen -l dim
 
-for_window [class="firefox"] move container to workspace 2
+for_window [class="librewolf"] move container to workspace 2
 for_window [title="^btop$"] move container to workspace 3
 
 workspace 1 output $primary_monitor
