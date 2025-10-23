@@ -9,6 +9,7 @@ bindkey -v
 zstyle :compinstall filename '/home/mash/.zshrc'
 
 export EDITOR=nvim
+export SUDO_EDITOR=nvim
 export VISUAL=nvim
 
 autoload -Uz compinit
