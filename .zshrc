@@ -11,6 +11,7 @@ zstyle :compinstall filename '/home/mash/.zshrc'
 export EDITOR=nvim
 export SUDO_EDITOR=nvim
 export VISUAL=nvim
+export QT_QPA_PLATFORMTHEME=qt5ct
 
 autoload -Uz compinit
 compinit
