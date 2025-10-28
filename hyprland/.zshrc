@@ -1,3 +1,5 @@
+fastfetch
+
 # ============================================
 # PERFORMANCE - Load first
 # ============================================
@@ -151,11 +153,8 @@ if [[ -f /usr/share/zsh/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh ]]; 
 fi
 
 # ============================================
-# PATH (add your custom paths here)
+# 
 # ============================================
-
-fastfetch
-
 export EDITOR="nvim"
 export VISUAL="nvim"
 
