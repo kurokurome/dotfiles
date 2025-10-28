@@ -1,0 +1,105 @@
+{
+"layer": "bottom",
+"margin": "5 5 0 5",
+
+"modules-left": [
+	"hyprland/window",
+	"custom/media",
+],
+"modules-center": [
+	"hyprland/workspaces",
+],
+"modules-right": [
+	"wireplumber",
+	"network",
+	"temperature",
+	"battery",
+	"clock",
+	"custom/power"
+],
+
+//################
+//   HYPRLAND
+//################
+
+"hyprland/window": {
+	"max-length": 25,
+        "rewrite": {
+		"(.*) — Mozilla Firefox": "Firefox",
+		},
+	"justify": "center",
+},
+
+"hyprland/workspaces": {
+	"format": "{id}",
+	"persistent-workspaces": {
+		"*": 3,
+	},
+},
+
+//################
+//    MODULES
+//################
+
+"clock": {
+	"format": "{:%H:%M:%S}",
+	"format-alt": "{:%A, %d-%m-%Y}",
+	"interval": 1,
+	"tooltip-format": "<big>{:%A, %d}</big>\n<tt><small>{calendar}</small></tt>"
+},
+
+"temperature": {
+	"hwmon-path": "/sys/class/hwmon/hwmon5/temp1_input",
+	"format": "{icon} {temperatureC}°C",
+	"format-icons": ["", "", ""],
+	"interval": 2,
+},
+
+"battery": {
+	"format": "{icon} {capacity}%",
+	"format-icons": ["", "", "", "", ""],
+},
+
+"wireplumber": {
+	"format": "{icon} {volume}%",
+	"tooltip": false,
+	"format-muted": " MUTE",
+	"format-icons": ["󰕿", "󰖀", "󰕾"],
+	"on-click": "wpctl set-mute @DEFAULT_AUDIO_SINK@ toggle",
+	"on-click-right": "flatpak run com.saivert.pwvucontrol",
+},
+
+"custom/power": {
+    "format" : "⏻ ",
+        "tooltip": false,
+        "menu": "on-click",
+        "menu-file": "~/.config/waybar/power_menu.xml",
+        "menu-actions": {
+            "reboot": "reboot",
+            "shutdown": "shutdown",
+        },
+},
+
+"network": {
+	"interface": "wlp3s0",
+	"format": " {bandwidthDownBytes}",
+	"format-alt": "󰛳 {ifname}",
+	"tooltip-format": "{ipaddr}",
+	"tooltip-format-wifi": "{essid} / {signalStrength}%",
+	"max-length": 25,
+	"on-click-right": "nmtui",
+	"interval": 2
+},
+
+"custom/media": {
+    "format": "{icon} {text}",
+    "return-type": "json",
+    "format-icons": {
+        "Playing": "",
+        "Paused": ""
+    },
+    "max-length": 30,
+    "exec": "playerctl -a metadata --format '{\"text\": \"{{title}}\", \"tooltip\": \"󰠃 {{artist}} | {{markup_escape(title)}}\", \"alt\": \"{{status}}\", \"class\": \"{{status}}\"}' -F",
+},
+
+}

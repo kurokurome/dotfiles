@@ -1,0 +1,114 @@
+* {
+  font-family: "JetBrainsMono Nerd Font", monospace;
+  font-size: 14px;
+  min-height: 0;
+  font-weight: 600;
+  border: none;
+}
+
+window#waybar {
+  color: #ff8c5d;
+  background: transparent;
+}
+
+#workspaces button {
+  color: transparent;
+  background: rgba(13, 31, 45, 0.8);
+  transition: all 0.2s ease-out;
+  border-radius: 150px;
+  margin: 2px 2px;
+}
+
+#workspaces button:hover {
+  box-shadow: none;
+  text-shadow: none;
+  transition: inherit;
+  min-width: 25px;
+  color: rgba(255, 140, 93, 1);
+}
+
+#workspaces button.active {
+  color: #0d1f2d;
+  background: rgba(255, 140, 93, 0.8);
+  min-width: 25px;
+  border-radius: 5px;
+}
+
+#workspaces button.active:hover {
+  color: #0d1f2d;
+  background: rgba(255, 140, 93, 1);
+  min-width: 25px;
+  border-radius: 5px;
+}
+
+#window {
+  background: rgba(13, 31, 45, 0.8);
+  border-radius: 15px 0px 50px 15px;
+  padding: 0px 15px 0px 10px;
+  min-width: 250px;
+  border: solid 2px rgba(255, 140, 93, 1);
+}
+
+#custom-media {
+  background: rgba(13, 31, 45, 0.8);
+  border-radius: 50px 0px 50px 0px;
+  padding: 0px 15px;
+  border: solid 2px rgba(255, 140, 93, 1);
+  min-width: 250px;
+}
+
+#wireplumber,
+#network,
+#memory,
+#temperature,
+#battery,
+#clock,
+#custom-power {
+  background: rgba(13, 31, 45, 0.8);
+  border: solid 2px rgba(255, 140, 93, 1);
+  border-radius: 10px;
+  padding: 0px 5px;
+}
+
+#custom-power {
+  padding-left: 15px;
+  border-radius: 0px 15px 15px 50px;
+}
+
+#wireplumber {
+  min-width: 70px;
+  border-radius: 0px 50px 0px 50px;
+}
+
+#network {
+  border-radius: 0px 50px 0px 50px;
+  min-width: 115px;
+  padding: 0px 7px;
+}
+
+#temperature {
+  border-radius: 0px 50px 0px 50px;
+  min-width: 85px;
+}
+
+#battery {
+  border-radius: 0px 50px 0px 50px;
+  min-width: 85px;
+}
+
+#clock {
+  border-radius: 0px 50px 0px 50px;
+  padding: 0px 15px;
+}
+
+menu {
+  border-radius: 15px;
+  background: rgba(13, 31, 45, 0.8);
+  border: solid 2px rgba(255, 140, 93, 1);
+  color: #ff8c5d;
+}
+
+menuitem:hover {
+  background: transparent;
+  color: #fef5e7;
+}

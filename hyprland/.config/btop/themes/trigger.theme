@@ -1,0 +1,80 @@
+# btop theme based on anime artwork color palette
+# Save this as: ~/.config/btop/themes/anime-artwork.theme
+# Then in btop: press ESC > Options > Color theme > anime-artwork
+
+# Main background and foreground
+theme[main_bg]="#0d1f2d"
+theme[main_fg]="#fef5e7"
+
+# Title and borders
+theme[title]="#ff8c5d"
+theme[hi_fg]="#ff8c5d"
+theme[selected_bg]="#2a4a5e"
+theme[selected_fg]="#fef5e7"
+
+# Inactive/Unfocused
+theme[inactive_fg]="#3d5f72"
+
+# Process box colors
+theme[proc_misc]="#6fa8bf"
+theme[cpu_box]="#ff8c5d"
+theme[mem_box]="#4d9dbf"
+theme[net_box]="#6fbc8d"
+theme[proc_box]="#ffa35d"
+
+# Graph colors - CPU
+theme[graph_text]="#fef5e7"
+theme[meter_bg]="#1a3a52"
+theme[used_start]="#ff8c5d"
+theme[used_mid]="#ffa35d"
+theme[used_end]="#ffb87d"
+theme[available_start]="#2a4a5e"
+theme[available_mid]="#1a3a52"
+theme[available_end]="#0d1f2d"
+
+# CPU gradient (from orange to bright orange)
+theme[cpu_start]="#ff6b35"
+theme[cpu_mid]="#ff8c5d"
+theme[cpu_end]="#ffa35d"
+
+# Memory/Disk gradient (from cyan to blue)
+theme[free_start]="#4d9dbf"
+theme[free_mid]="#6fb5d4"
+theme[free_end]="#8fbdd4"
+
+theme[cached_start]="#6fa8bf"
+theme[cached_mid]="#8fbdd4"
+theme[cached_end]="#6fb5d4"
+
+theme[available_start]="#2a4a5e"
+theme[available_mid]="#1a3a52"
+theme[available_end]="#0d1f2d"
+
+theme[used_start]="#4d9dbf"
+theme[used_mid]="#6fb5d4"
+theme[used_end]="#8fbdd4"
+
+# Network gradient (from green to mint)
+theme[download_start]="#6fbc8d"
+theme[download_mid]="#8fd4a8"
+theme[download_end]="#6fbc8d"
+
+theme[upload_start]="#ff8c5d"
+theme[upload_mid]="#ffa35d"
+theme[upload_end]="#ffb87d"
+
+# Process colors
+theme[process_start]="#ffa35d"
+theme[process_mid]="#ff8c5d"
+theme[process_end]="#ff6b35"
+
+# Temperature gradient (cool to hot)
+theme[temp_start]="#6fbc8d"
+theme[temp_mid]="#ffa35d"
+theme[temp_end]="#ff4444"
+
+# Additional UI elements
+theme[div_line]="#2a4a5e"
+theme[gradient_start]="#ff8c5d"
+theme[gradient_mid]="#4d9dbf"
+theme[gradient_end]="#6fbc8d"
