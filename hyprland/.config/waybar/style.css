@@ -105,10 +105,11 @@ menu {
   border-radius: 15px;
   background: rgba(13, 31, 45, 0.8);
   border: solid 2px rgba(255, 140, 93, 1);
-  color: #ff8c5d;
+  color: #fef5e7;
 }
 
 menuitem:hover {
   background: transparent;
-  color: #fef5e7;
+  color: #ff8c5d;
+  transition: all 0.3s ease;
 }
