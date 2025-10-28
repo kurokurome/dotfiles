@@ -1,6 +1,6 @@
 {
 "layer": "bottom",
-"margin": "5 5 0 5",
+"margin": "7 5 3 5",
 
 "modules-left": [
 	"hyprland/window",
