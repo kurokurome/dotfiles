@@ -133,15 +133,15 @@ return {
 			vim.api.nvim_set_hl(0, "NeoTreeGitModified", { fg = colors.bright_orange })
 			vim.api.nvim_set_hl(0, "NeoTreeGitDeleted", { fg = colors.red })
 
-			vim.api.nvim_set_hl(0, "WhichKey", { fg = colors.orange, bg = "NONE", bold = true })
+			vim.api.nvim_set_hl(0, "WhichKey", { fg = colors.orange, bold = true })
 			vim.api.nvim_set_hl(0, "WhichKeyGroup", { fg = colors.cyan })
-			vim.api.nvim_set_hl(0, "WhichKeyDesc", { fg = colors.fg, bg = "NONE" })
+			vim.api.nvim_set_hl(0, "WhichKeyDesc", { fg = colors.fg })
 			vim.api.nvim_set_hl(0, "WhichKeySeparator", { fg = colors.comment })
-			vim.api.nvim_set_hl(0, "WhichKeyFloat", { bg = "NONE" })
-			vim.api.nvim_set_hl(0, "WhichKeyBorder", { fg = colors.border, bg = "NONE" })
+			vim.api.nvim_set_hl(0, "WhichKeyFloat", { bg = colors.bg })
+			vim.api.nvim_set_hl(0, "WhichKeyBorder", { fg = colors.border, bg = colors.bg })
 			vim.api.nvim_set_hl(0, "WhichKeyValue", { fg = colors.teal })
-			vim.api.nvim_set_hl(0, "WhichKeyNormal", { bg = "NONE" })
-			vim.api.nvim_set_hl(0, "WhichKeySeparator", { fg = colors.comment })
+			vim.api.nvim_set_hl(0, "WhichKeyNormal", { bg = colors.bg, fg = colors.fg })
+			vim.api.nvim_set_hl(0, "WhichKeySeperator", { fg = colors.comment })
 		end,
 	},
 }

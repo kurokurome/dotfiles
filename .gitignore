@@ -3,6 +3,7 @@
 
 !/hyprland/.zshrc
 !/hyprland/Wallpaper/*
+!/hyprland/.config/
 !/hyprland/.config/btop/themes/*
 !/hyprland/.config/fastfetch/*
 !/hyprland/.config/hypr/*

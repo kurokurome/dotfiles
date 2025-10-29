@@ -10,11 +10,5 @@ return {
 		icons = {
 			separator = "→ ",
 		},
-		win = {
-			border = "single",
-			wo = {
-				winblend = 0,
-			},
-		},
 	},
 }
