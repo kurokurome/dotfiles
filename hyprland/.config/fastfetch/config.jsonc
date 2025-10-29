@@ -62,6 +62,11 @@
       "keyColor": "38;2;111;168;191"
     },
     {
+      "type": "uptime",
+      "key": "├─",
+      "keyColor": "38;2;111;188;141"
+    },
+    {
       "type": "terminal",
       "key": "╰─",
       "keyColor": "38;2;255;140;93"
