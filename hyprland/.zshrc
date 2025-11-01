@@ -122,9 +122,6 @@ bindkey '^[[3~' delete-char             # Delete
 # ============================================
 # PLUGINS (install these for best experience)
 # ============================================
-# Install plugins:
-# git clone https://github.com/zsh-users/zsh-syntax-highlighting.git ~/.zsh/zsh-syntax-highlighting
-# git clone https://github.com/zsh-users/zsh-autosuggestions ~/.zsh/zsh-autosuggestions
 
 # Syntax highlighting
 if [[ -f /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh ]]; then
@@ -135,12 +132,12 @@ if [[ -f /usr/share/zsh/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.
     ZSH_HIGHLIGHT_STYLES[builtin]='fg=#ff6b35'
     ZSH_HIGHLIGHT_STYLES[alias]='fg=#ff6b35'
     ZSH_HIGHLIGHT_STYLES[function]='fg=#2d5366'
-    ZSH_HIGHLIGHT_STYLES[unknown-token]='fg=#e85d3a'
+    ZSH_HIGHLIGHT_STYLES[unknown-token]='fg=#fef5e7'
     ZSH_HIGHLIGHT_STYLES[single-hyphen-option]='fg=#6fa8bf'
     ZSH_HIGHLIGHT_STYLES[double-hyphen-option]='fg=#6fa8bf'
     ZSH_HIGHLIGHT_STYLES[single-quoted-argument]='fg=#4a5c52'
     ZSH_HIGHLIGHT_STYLES[double-quoted-argument]='fg=#4a5c52'
-    ZSH_HIGHLIGHT_STYLES[path]='fg=#f4e8d0,underline'
+    ZSH_HIGHLIGHT_STYLES[path]='fg=#4d9dbf,underline'
     ZSH_HIGHLIGHT_STYLES[globbing]='fg=#ff6b35'
     ZSH_HIGHLIGHT_STYLES[redirection]='fg=#ff6b35'
 fi

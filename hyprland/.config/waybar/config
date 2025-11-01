@@ -77,18 +77,20 @@
         "menu-actions": {
             "reboot": "reboot",
             "hibernate": "systemctl hibernate",
-            "shutdown": "shutdown",
+            "shutdown": "systemctl poweroff",
         },
 },
 
 "network": {
 	"interface": "wlp3s0",
 	"format": " {bandwidthDownBytes}",
+  "format-disconnected": " Offline",
 	"format-alt": "󰛳 {ifname}",
 	"tooltip-format": "{ipaddr}",
 	"tooltip-format-wifi": "{essid} / {signalStrength}%",
+  "tooltip-format-disconnected": "Not connected",
 	"max-length": 25,
-	"on-click-right": "nmtui",
+	"on-click-right": "kitty -e nmtui",
 	"interval": 2
 },
 
@@ -101,6 +103,7 @@
     },
     "max-length": 30,
     "exec": "playerctl -a metadata --format '{\"text\": \" {{markup_escape(title)}}\", \"tooltip\": \"󰠃 {{artist}} | {{markup_escape(title)}}\", \"alt\": \"{{status}}\", \"class\": \"{{status}}\"}' -F",
+    "on-click": "playerctl play-pause"
 },
 
 }
