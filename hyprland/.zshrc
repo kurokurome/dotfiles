@@ -155,4 +155,7 @@ fi
 export EDITOR="nvim"
 export VISUAL="nvim"
 
+export BUN_INSTALL="$HOME/.bun"
+export PATH="$BUN_INSTALL/bin:$PATH"
+
 alias settdp="sudo /usr/local/bin/ryzenadj-12w.sh"
