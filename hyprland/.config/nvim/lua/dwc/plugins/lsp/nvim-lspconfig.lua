@@ -127,9 +127,9 @@ return {
 		vim.lsp.config("ts_ls", {
 			root_dir = function(bufnr, on_dir)
 				local root_markers =
-					{ "package-lock.json", "yarn.lock", "pnpm-lock.yaml", "bun.lockb", "bun.lock", ".git", "script.js" }
-				root_markers = vim.fn.has("nvim-0.11.3") == 1 and { root_markers } or root_markers
+					{ "package-lock.json", "yarn.lock", "pnpm-lock.yaml", "bun.lockb", "bun.lock", ".git" }
 				local project_root = vim.fs.root(bufnr, root_markers)
+				root_markers = vim.fn.has("nvim-0.11.3") == 1 and { root_markers } or root_markers
 				if not project_root then
 					return
 				end

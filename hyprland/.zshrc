@@ -158,4 +158,10 @@ export VISUAL="nvim"
 export BUN_INSTALL="$HOME/.bun"
 export PATH="$BUN_INSTALL/bin:$PATH"
 
-alias settdp="sudo /usr/local/bin/ryzenadj-12w.sh"
+alias settdp="sudo /usr/local/bin/ryzenadj-set.sh"
+alias cls="clear"
+
+alias warpcon="warp-cli connect"
+alias warpdiscon="warp-cli disconnect"
+
+alias update-discord="sudo pacman -Sy discord"
