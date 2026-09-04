@@ -1,0 +1,6 @@
+window.button.spacing: 6
+
+window.button.height: 26
+window.button.width: 26
+
+window.button.hover.bg.corner-radius: 13

@@ -1,0 +1,120 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<labwc_config>
+  <theme>
+    <name>noctalia</name>
+    <icon>Tela</icon>
+  </theme>
+
+  <placement>
+    <policy>center</policy>
+  </placement>
+
+  <windowSwitcher preview="no" outlines="no">
+    <osd show="yes" style="thumbnail" output="all"/>
+  </windowSwitcher>
+
+  <mouse>
+    <default />
+    <context name="Root">
+      <mousebind button="Left" action="Press" />
+      <mousebind button="Right" action="Press" />
+    </context>
+    <context name="Frame">
+      <mousebind button="W-Right" action="Drag" />
+    </context>
+    <context name="TitleBar">
+    <mousebind direction="Up" action="Scroll"/>
+    <mousebind direction="Down" action="Scroll"/>
+    </context>
+  </mouse>
+
+  <keyboard>
+    <keybind key="A-Tab">
+     <action name="NextWindow"/>
+    </keybind>
+
+    <keybind key="W-r">
+      <action name="Execute">
+      <command>
+      sh -c 'labwc --reconfigure &amp;&amp; notify-send -t 1250 -a "Labwc" -i "/home/debugwithcare/.local/share/icons/Tela/32@2x/actions/configure.svg" "Labwc Reconfigured"'
+      </command>
+      </action>
+    </keybind>
+
+    <keybind key="W-d">
+      <action name="Execute" command="noctalia msg panel-toggle launcher" />
+    </keybind>
+    <keybind key="W-,">
+      <action name="Execute" command="noctalia msg settings-toggle" />
+    </keybind>
+    <keybind key="W-e">
+      <action name="Execute" command="nemo" />
+    </keybind>
+    <keybind key="W-b">
+      <action name="Execute" command="firefox" />
+    </keybind>
+    <keybind key="W-Return">
+     <action name="Execute" command="kitty" />
+    </keybind>
+
+    <keybind key="W-S-q">
+     <action name="Kill" />
+    </keybind>
+    <keybind key="A-F4">
+     <action name="Kill" />
+    </keybind>
+    <keybind key="W-S-d">
+     <action name="ToggleShowDesktop" />
+    </keybind>
+    <keybind key="W-Space">
+      <action name="Execute" command="noctalia msg panel-toggle control-center" />
+    </keybind>
+    <keybind key="W-l">
+      <action name="Execute" command="noctalia msg session lock" />
+    </keybind>
+
+    <keybind key="W-S-s">
+      <action name="Execute" command="noctalia msg screenshot-region" />
+    </keybind>
+    <keybind key="Print">
+      <action name="Execute" command="noctalia msg screenshot-fullscreen" />
+    </keybind>
+
+    <keybind key="XF86MonBrightnessUp">
+      <action name="Execute" command="noctalia msg brightness-up" />
+    </keybind>
+    <keybind key="XF86MonBrightnessDown">
+      <action name="Execute" command="noctalia msg brightness-down" />
+    </keybind>
+
+    <keybind key="XF86AudioLowerVolume">
+      <action name="Execute" command="noctalia msg volume-down 2" />
+    </keybind>
+    <keybind key="XF86AudioRaiseVolume">
+      <action name="Execute" command="noctalia msg volume-up 2" />
+    </keybind>
+    <keybind key="XF86AudioMute">
+      <action name="Execute" command="noctalia msg volume-mute" />
+    </keybind>
+    <keybind key="XF86AudioPlay">
+      <action name="Execute" command="noctalia msg media toggle" />
+    </keybind>
+    <keybind key="XF86AudioNext">
+      <action name="Execute" command="noctalia msg media next" />
+    </keybind>
+    <keybind key="XF86AudioPrev">
+      <action name="Execute" command="noctalia msg media previous" />
+    </keybind>
+  </keyboard>
+
+  <libinput>
+    <device>
+      <accelProfile>flat</accelProfile>
+    </device>
+    <device category="touchpad">
+      <naturalScroll>yes</naturalScroll>
+      <accelProfile>flat</accelProfile>
+      <scrollFactor>0.5</scrollFactor>
+    </device>
+  </libinput>
+</labwc_config>

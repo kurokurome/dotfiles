@@ -1,0 +1,469 @@
+config_version = 12
+
+[bar.default]
+capsule = true
+capsule_radius = 8
+capsule_thickness = 0.99999998137354851
+center = []
+concave_edge_corners = false
+end = [ "group:g2", "date", "Notifications" ]
+font_family = "Noto Sans"
+margin_ends = 0
+padding = 0
+position = "bottom"
+radius = 0
+shadow = false
+start = [ "control-center", "taskbar" ]
+
+    [bar.default.dead_zone.actions]
+    right = "none"
+
+    [[bar.default.capsule_group]]
+    accordion = false
+    accordion_direction = "end"
+    enabled = true
+    fill = "surface"
+    id = "g2"
+    members = [ "weather", "sysmon", "cpu", "tray", "network", "volume", "battery" ]
+    opacity = 1.0
+    padding = 6.0
+    widget_spacing = 10
+
+[control_center]
+hidden_tabs = [ "media", "bluetooth" ]
+sidebar_section = "none"
+
+    [control_center.calendar]
+    show_events_card = false
+
+    [[control_center.shortcuts]]
+    type = "wifi"
+
+    [[control_center.shortcuts]]
+    type = "bluetooth"
+
+    [[control_center.shortcuts]]
+    type = "clipboard"
+
+    [[control_center.shortcuts]]
+    type = "caffeine"
+
+[desktop_widgets]
+schema_version = 2
+widget_order = [
+    "desktop-widget-0000000000000001",
+    "desktop-widget-0000000000000002",
+    "desktop-widget-0000000000000003",
+    "desktop-widget-0000000000000004"
+]
+
+    [desktop_widgets.grid]
+    cell_size = 32
+    major_interval = 4
+    visible = true
+
+    [desktop_widgets.widget.desktop-widget-0000000000000001]
+    box_height = 80.0
+    box_width = 240.0
+    cx = 136.0
+    cy = 60.0
+    output = "eDP-1"
+    rotation = 0.0
+    type = "weather"
+
+        [desktop_widgets.widget.desktop-widget-0000000000000001.settings]
+        background = false
+        shadow = false
+
+    [desktop_widgets.widget.desktop-widget-0000000000000002]
+    box_height = 104.0
+    box_width = 360.0
+    cx = 1724.0
+    cy = 67.0
+    output = "eDP-1"
+    rotation = 0.0
+    type = "audio_visualizer"
+
+        [desktop_widgets.widget.desktop-widget-0000000000000002.settings]
+        background = true
+        background_opacity = 0.80000000000000004
+        background_padding = 0
+        background_radius = 0
+        bands = 60
+        centered = false
+        color_2 = "secondary"
+        mirrored = false
+        show_when_idle = true
+
+    [desktop_widgets.widget.desktop-widget-0000000000000003]
+    box_height = 64.0
+    box_width = 288.0
+    cx = 960.0
+    cy = 111.0
+    output = "eDP-1"
+    rotation = 0.0
+    type = "clock"
+
+        [desktop_widgets.widget.desktop-widget-0000000000000003.settings]
+        background = false
+        background_padding = 0
+        background_radius = 0
+        center_text = true
+        clock_style = "digital"
+        format = "%A, %d/%m/%Y"
+
+    [desktop_widgets.widget.desktop-widget-0000000000000004]
+    box_height = 64.0
+    box_width = 288.0
+    cx = 960.0
+    cy = 47.0
+    output = "eDP-1"
+    rotation = 0.0
+    type = "clock"
+
+        [desktop_widgets.widget.desktop-widget-0000000000000004.settings]
+        background = false
+        center_text = true
+        format = "{:%H:%M:%S}"
+
+[idle]
+behavior_order = [ "Dim", "ScreenOff", "lock" ]
+
+    [idle.behavior.Dim]
+    action = "command"
+    command = "brightnessctl set 0%"
+    enabled = true
+    resume_command = "brightnessctl set 100%"
+    timeout = 600.0
+
+    [idle.behavior.ScreenOff]
+    action = "command"
+    command = "wlopm --off eDP-1"
+    enabled = true
+    resume_command = "wlopm --on eDP-1"
+    timeout = 900.0
+
+    [idle.behavior.lock]
+    action = "lock"
+    enabled = true
+    timeout = 900.0
+
+[location]
+address = "Palembang, Indonesia"
+
+[lockscreen]
+fingerprint = false
+
+[lockscreen_widgets]
+enabled = true
+schema_version = 2
+widget_order = [ "lockscreen-login-box@WL-1", "lockscreen-login-box@eDP-1" ]
+
+    [lockscreen_widgets.grid]
+    cell_size = 16
+    major_interval = 4
+    visible = true
+
+    [lockscreen_widgets.widget."lockscreen-login-box@WL-1"]
+    box_height = 196.0
+    box_width = 810.0
+    cx = 640.0
+    cy = 538.0
+    output = "WL-1"
+    rotation = 0.0
+    type = "login_box"
+
+        [lockscreen_widgets.widget."lockscreen-login-box@WL-1".settings]
+        background_color = "surface_variant"
+        background_opacity = 0.88
+        background_radius = 12.0
+        center_password_text = false
+        input_opacity = 1.0
+        input_radius = 6.0
+        layout = "regular"
+        show_caps_lock = true
+        show_keyboard_layout = true
+        show_login_button = true
+        show_media = true
+        show_session_buttons = true
+        show_unlock_hint = true
+        show_weather = true
+
+    [lockscreen_widgets.widget."lockscreen-login-box@eDP-1"]
+    box_height = 196.0
+    box_width = 810.0
+    cx = 960.0
+    cy = 540.0
+    output = "eDP-1"
+    rotation = 0.0
+    type = "login_box"
+
+        [lockscreen_widgets.widget."lockscreen-login-box@eDP-1".settings]
+        background_color = "surface_variant"
+        background_opacity = 0.80000000000000004
+        background_radius = 0.0
+        center_password_text = true
+        input_opacity = 1.0
+        input_radius = 0.0
+        layout = "regular"
+        show_caps_lock = true
+        show_keyboard_layout = false
+        show_login_button = true
+        show_media = false
+        show_session_buttons = true
+        show_unlock_hint = false
+        show_weather = true
+
+[notification]
+background_opacity = 0.99999997764825821
+layer = "overlay"
+offset_x = 0
+offset_y = 10
+
+[osd]
+background_opacity = 0.99999997764825821
+offset_x = 0
+offset_y = 10
+position = "top_right"
+position_vertical = "top_right"
+scale = 1.1000000089406967
+
+    [osd.kinds]
+    caffeine = false
+    dnd = false
+    keyboard_backlight = false
+    keyboard_layout = false
+    lock_keys = false
+    media = false
+    nightlight = false
+    power_profile = false
+
+[plugins]
+enabled = []
+
+    [[plugins.source]]
+    kind = "git"
+    location = "https://github.com/noctalia-dev/official-plugins"
+    name = "official"
+
+    [[plugins.source]]
+    kind = "git"
+    location = "https://github.com/noctalia-dev/community-plugins"
+    name = "community"
+
+[shell]
+app_icon_color = "primary"
+clipboard_auto_paste = "ctrl_v"
+corner_radius_scale = 0.0
+font_family = "Noto Sans"
+polkit_agent = true
+popup_shadows = false
+show_location = false
+
+    [shell.animation]
+    enabled = false
+
+    [shell.launcher]
+    auto_paste = "off"
+    categories = false
+    compact = true
+    fetch_exchange_rates = false
+    sort_by_usage = false
+
+    [shell.panel]
+    control_center_placement = "floating"
+    open_near_click_control_center = true
+    session_placement = "floating"
+    session_position = "center_left"
+    shadow = false
+
+    [shell.screen_corners]
+    size = 1
+
+    [shell.session]
+    grid = true
+    grid_columns = 1
+    show_shortcuts = false
+
+        [[shell.session.actions]]
+        action = "lock"
+        countdown_seconds = 0.0
+        enabled = true
+        shortcut = "1"
+        variant = "default"
+
+        [[shell.session.actions]]
+        action = "logout"
+        countdown_seconds = 0.0
+        enabled = true
+        shortcut = "2"
+        variant = "default"
+
+        [[shell.session.actions]]
+        action = "lock_and_suspend"
+        countdown_seconds = 0.0
+        enabled = false
+        shortcut = "3"
+        variant = "default"
+
+        [[shell.session.actions]]
+        action = "reboot"
+        countdown_seconds = 0.0
+        enabled = true
+        shortcut = "4"
+        variant = "default"
+
+        [[shell.session.actions]]
+        action = "shutdown"
+        countdown_seconds = 0.0
+        enabled = true
+        shortcut = "5"
+        variant = "destructive"
+
+    [shell.shadow]
+    alpha = 0.0
+
+[system.monitor]
+cpu_temp_activity_threshold = 80
+cpu_temp_critical_threshold = 95
+network_poll_seconds = 2
+
+[theme]
+builtin = "Eldritch"
+community_palette = "Paradise"
+custom_palette = "frieren-vib"
+mode = "dark"
+source = "wallpaper"
+wallpaper_scheme = "soft"
+
+    [theme.templates]
+    builtin_ids = [ "btop", "gtk3", "gtk4", "kitty", "labwc", "qt" ]
+    enable_community_templates = false
+
+[wallpaper]
+directory = "/home/debugwithcare/Wallpaper"
+fill_mode = "fit"
+transition = [ "zoom" ]
+
+    [wallpaper.automation]
+    order = "alphabetical"
+
+    [wallpaper.default]
+    path = "/home/debugwithcare/Wallpaper/Pix.png"
+
+    [wallpaper.last]
+    path = "/home/debugwithcare/Wallpaper/Pix.png"
+
+    [wallpaper.monitors.eDP-1]
+    path = "/home/debugwithcare/Wallpaper/Pix.png"
+
+[weather]
+effects = false
+refresh_minutes = 15
+
+[widget.Notifications]
+capsule = true
+capsule_fill = "outline"
+capsule_opacity = 0.29999999999999999
+capsule_padding = 10
+custom_image_colorize = true
+glyph = "message"
+type = "custom_button"
+
+    [widget.Notifications.actions]
+    left = "panel-toggle control-center notifications"
+    middle = "none"
+
+[widget.battery.actions]
+left = "panel-toggle control-center monitor"
+middle = "none"
+
+[widget.control-center]
+capsule = true
+capsule_radius = "auto"
+custom_image = "/usr/share/icons/Papirus-Dark/128x128/apps/start-here-archlinux.svg"
+scale = 1.5
+
+    [widget.control-center.actions]
+    middle = "none"
+
+[widget.cpu]
+show_glyph = false
+stat = "cpu_temp"
+visualization = "none"
+
+    [widget.cpu.actions]
+    left = "none"
+    middle = "none"
+
+[widget.date]
+capsule = true
+capsule_fill = "surface"
+capsule_radius = "auto"
+format = "{:%H:%M:%S }"
+tooltip_format = "%A, %d/%m/%Y"
+
+    [widget.date.actions]
+    middle = "none"
+
+[widget.network]
+capsule_fill = "error"
+capsule_padding = 0
+capsule_radius = "auto"
+show_label = false
+
+    [widget.network.actions]
+    middle = "none"
+    right = "none"
+
+[widget.session]
+capsule = true
+capsule_radius = "auto"
+custom_image = "/usr/share/icons/Papirus-Dark/128x128/apps/distributor-logo-artix.svg"
+scale = 1.5
+
+[widget.sysmon]
+anchor = true
+capsule_border = "secondary"
+capsule_fill = "primary"
+capsule_foreground = "on_secondary"
+label_min_width = 40
+show_glyph = false
+stat = "net_rx"
+visualization = "none"
+
+    [widget.sysmon.actions]
+    left = "none"
+    middle = "none"
+
+[widget.taskbar]
+capsule_fill = "surface"
+capsule_radius = "auto"
+group_single_icon_per_app = true
+inactive_opacity = 0.80000000000000004
+scale = 1.5
+workspace_group_capsule = false
+workspace_label_placement = "inside"
+
+    [widget.taskbar.actions]
+    scroll_down = "none"
+    scroll_up = "none"
+
+[widget.tray]
+anchor = true
+capsule_foreground = "tertiary"
+capsule_radius = "auto"
+detached_panel = true
+drawer = true
+drawer_columns = 2
+match_adjacent_spacing = true
+
+    [widget.tray.actions]
+    middle = "none"
+
+[widget.volume.actions]
+middle = "none"
+
+[widget.weather]
+capsule = true
+capsule_fill = "surface"
